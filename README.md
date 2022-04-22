@@ -5,8 +5,8 @@
 <p>informations are availabe in the userstableseeder. just, you can access and get by running it</p>
 
 
-<p><b>The project has the following parts:</b>
-<i><b>Admin and Client</b></i>
+<p><b>The project has the following parts:</b></br>
+<i><b>Admin and Client</b></i></br>
 <b>Admin can process the following functionalities;</b></br>
 Login</br>
 Register Admin</br>
