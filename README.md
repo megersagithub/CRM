@@ -7,18 +7,18 @@
 
 <p>The project has the following parts:
 Admin and Client
-Admin can process the following functionalities;
-Login
-Register Admin
-Update Admin
-Delete Admin
-Display Admin and Client
+Admin can process the following functionalities;</br>
+Login</br>
+Register Admin</br>
+Update Admin</br>
+Delete Admin</br>
+Display Admin and Client</br>
 
-Client can process the following functionalities;
-Login
-Add product
-Add Category
-Display Product
-Display Category
+Client can process the following functionalities;</br>
+Login</br>
+Add product</br>
+Add Category</br>
+Display Product</br>
+Display Category</br>
 Front page
 </p>
