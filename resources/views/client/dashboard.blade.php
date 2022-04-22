@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('layouts.master')
 
 @section('title')
 
@@ -27,7 +27,7 @@ CRM_and_Store
                   <div class="col-md-12">
                     <div class="card">
                       <div class="card-header">
-                        <h4 class="card-title"> Admin Users</h4>
+                        <h4 class="card-title"> Simple Table</h4>
                       </div>
                       <div class="card-body">
                         <div class="table-responsive">
@@ -39,17 +39,12 @@ CRM_and_Store
                               <th > Delete </th>
                             </thead>
                             <tbody>
-                              
-                                @foreach ($users as $user)
-                                    
-                                <tr>
-                                <td> {{ $user->name }}</td>
-                                <td>   {{ $user->email }}  </td>
+                              <tr>
+                                <td> Dakota Rice</td>
+                                <td>   Dakota Rice  </td>
                                 <td>  Dakota Rice</td>
                                 <td> Dakota Rice </td>
                               </tr>
-                                @endforeach
-                              
                             </tbody>
                           </table>
                         </div>

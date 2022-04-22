@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +28,22 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware'=>['auth','admin']], function(){
     
     Route::get('/dashboard', function () {
-        return view('admin.dashboard');
+        return view('client.dashboard');
    });
 
+    // Route::get('/register-role','Admin/DashboardController@registered');
+    Route::get('/register-role', 'App\Http\Controllers\Admin\DashboardController@registered');
+
+});
+
+Route::group(['middleware'=>['auth','admin']], function(){
+    
+    Route::get('/Admindashboard', function () {
+        return view('admin.dashboard');
+   });
+   Route::get('Admindashboard', [ClientController::class, 'index'])->name('admin.dashboard');
+   Route::get('admin/register', [ClientController::class, 'create'])->name('admin.register');
+   Route::post('admin/registeradmin', [ClientController::class, 'store'])->name('admin.adminregister');
     // Route::get('/register-role','Admin/DashboardController@registered');
     Route::get('/register-role', 'App\Http\Controllers\Admin\DashboardController@registered');
 

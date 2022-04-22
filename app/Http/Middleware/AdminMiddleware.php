@@ -17,6 +17,10 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        if(Auth::user()->usertype == 'client')
+        {
+            return $next($request);
+        }
         if(Auth::user()->usertype == 'admin')
         {
             return $next($request);
