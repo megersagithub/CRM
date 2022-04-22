@@ -2,7 +2,7 @@
 
 @section('title')
 
-Registered roles
+Store Client list
 
 @endsection
 
@@ -12,7 +12,7 @@ Registered roles
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title"> Register Role</h4>
+          <h4 class="card-title"> Store Client list </h4>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -20,22 +20,23 @@ Registered roles
               <thead class=" text-primary">
                 <th> Name </th>
                 <th>  Email  </th>
-                <th> EDIT </th>
-                <th > DELETE </th>
+                <th> Created at </th>
               </thead>
               <tbody>
-                <tr>
-                  <td> name</td>
-                  <td>   email@gmail.com </td>
+                @foreach ($users as $user)
+                    <tr>
+                  <td> {{$user->name}}</td>
+                  <td>  {{$user->email}} </td>
                   {{-- <td>  Dakota Rice</td> --}}
                   <td> 
-                      <a href="#" class="btn btn-success">EDIT</a>
-                  </td>
-                  <td> 
-                        <a href="#" class="btn btn-success">DELETE</a>
-                </td>
-                  
+                      {{$user->created_at}}
+                  </td> 
                 </tr>
+                @endforeach
+               
+                  
+                  
+                
               </tbody>
             </table>
           </div>

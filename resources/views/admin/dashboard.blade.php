@@ -45,8 +45,8 @@ CRM_and_Store
                                 <tr>
                                 <td> {{ $user->name }}</td>
                                 <td>   {{ $user->email }}  </td>
-                                <td>  Dakota Rice</td>
-                                <td> Dakota Rice </td>
+                                <td>   <a class="btn btn-danger" href="/admin/{{ $user->id }}/edit">Edit</a></td>
+                                <td> <a class="btn btn-danger" href="/admin/{{ $user->id }}/deleteadmin">delete</a> </td>
                               </tr>
                                 @endforeach
                               

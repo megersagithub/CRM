@@ -33,7 +33,7 @@ class LoginController extends Controller
     {
         if(Auth::user()->usertype == 'admin')
         {
-           return redirect()->route('Admindashboard');  
+            return 'Admindashboard';  
         }
         else if(Auth::user()->usertype == 'client')
         {

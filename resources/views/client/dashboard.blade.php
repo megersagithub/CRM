@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('client.layouts.master')
 
 @section('title')
 
@@ -27,24 +27,33 @@ CRM_and_Store
                   <div class="col-md-12">
                     <div class="card">
                       <div class="card-header">
-                        <h4 class="card-title"> Simple Table</h4>
+                        <h4 class="card-title"> Product List</h4>
                       </div>
                       <div class="card-body">
                         <div class="table-responsive">
                           <table class="table">
                             <thead class=" text-primary">
-                              <th> Name </th>
-                              <th>  Email  </th>
-                              <th>  Update</th>
-                              <th > Delete </th>
+                              <th> Product Name </th>
+                              <th>  Description  </th>
+                              <th>  Category</th>
+                              <th > Quantity </th>
+                              <th > Price </th>
+
                             </thead>
                             <tbody>
+                          @if(count($products)>0)
+                            @foreach ($products as $product)
                               <tr>
-                                <td> Dakota Rice</td>
-                                <td>   Dakota Rice  </td>
-                                <td>  Dakota Rice</td>
-                                <td> Dakota Rice </td>
+                                <td> {{$product->name}}</td>
+                                <td>   {{$product->description}} </td>
+                                <td>  {{$product->category}}</td>
+                                <td> {{$product->quantity}}</td>
+                                <td> {{$product->price_per_unit}}</td>
                               </tr>
+                              @endforeach
+                              @else
+                                  <h1>no product found</h1>
+                              @endif
                             </tbody>
                           </table>
                         </div>
@@ -52,6 +61,7 @@ CRM_and_Store
                     </div>
                   </div>
               </div>
+             
               @endsection
               
               @section('scripts')

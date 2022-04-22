@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Product;
+use App\Models\User;
+use App\Models\Category;
+use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $products = DB::table('products')->where('client_id', auth()->user()->id)->paginate(5);
+        return view('client/dashboard', compact('products'));
+        
     }
 }

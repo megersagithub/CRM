@@ -17,10 +17,10 @@ class ClientController extends Controller
     public function index()
     {
         $users = DB::table('users')
-                ->where('usertype', '=', 'admin')
+                ->where('usertype', '=', 'client')
                 ->get();
                 
-        return view('admin.dashboard', compact('users'));
+        return view('admin.displayclient', compact('users'));
     }
 
     /**
@@ -30,7 +30,9 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('admin.register');
+        
+        $category = DB::table('categories')->where('client_id', auth()->user()->id)->get();
+        return view('client.addproduct',compact('category'));
     }
 
     /**
@@ -41,17 +43,8 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name'=> 'required',
-            'email'=> 'required',
-        ] );
-        $user = new User;
-        $user->name=$request->input('name');
-        $user->email=$request->input('email');
-        $user->usertype = "admin";
-        $user->password=Hash::make($request->input('password'));
-        $user->save();
-        return redirect('/Admindashboard')->with('success', "Registered successfully");
+        
+
     }
 
     /**
@@ -73,7 +66,8 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view("admin.editadmin")->with('user', $user);
     }
 
     /**
