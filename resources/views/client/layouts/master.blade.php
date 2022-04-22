@@ -40,9 +40,10 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li>
+            <h6>Client Dashboard</h6>
             <a href="{{route('client.dashboard')}}">
               <i class="now-ui-icons design_app"></i>
-              <p>Dashboard</p>
+              <p>Display Product</p>
             </a>
           </li>
           <li>
@@ -69,7 +70,7 @@
               <p>Front Page</p>
             </a>
           </li>
-          <li class="active ">
+          {{-- <li class="active ">
             <a href="./tables.html">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>Table List</p>
@@ -86,7 +87,7 @@
               <i class="now-ui-icons arrows-1_cloud-download-93"></i>
               <p>Upgrade to PRO</p>
             </a>
-          </li>
+          </li> --}}
         </ul>
       </div>
     </div>
@@ -102,7 +103,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Table List</a>
+            <a class="navbar-brand" href="#pablo"></a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -175,27 +176,27 @@
         <div class=" container-fluid ">
           <nav>
             <ul>
-              <li>
+              {{-- <li>
                 <a href="https://www.creative-tim.com">
                   Creative Tim
                 </a>
-              </li>
+              </li> --}}
               <li>
-                <a href="http://presentation.creative-tim.com">
+                {{-- <a href="http://presentation.creative-tim.com"> --}}
                   About Us
                 </a>
               </li>
-              <li>
+              {{-- <li>
                 <a href="http://blog.creative-tim.com">
                   Blog
-                </a>
+                </a> --}}
               </li>
             </ul>
           </nav>
           <div class="copyright" id="copyright">
             &copy; <script>
               document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-            </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+            </script>, Designed by  Coded by Megersa Daraje</a>.
           </div>
         </div>
       </footer>
