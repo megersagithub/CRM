@@ -42,31 +42,32 @@
           <li>
             <h6>Client Dashboard</h6>
             <a href="{{route('client.dashboard')}}">
-              <i class="now-ui-icons design_app"></i>
+              <i><img style="width: 30px" src="{{asset('assets/img/pd.png')}}"></i> 
               <p>Display Product</p>
             </a>
           </li>
           <li>
-            <a href="{{route('client.product')}}">
-              <i class="now-ui-icons education_atom"></i>
-              <p>Add Products</p>
-            </a>
-          </li>
-          <li>
             <a href="{{route('client.Category')}}">
-              <i class="now-ui-icons location_map-big"></i>
+              <i><img style="width: 30px" src="{{asset('assets/img/ac.jpg')}}"></i> 
               <p>Add Category</p>
             </a>
           </li>
           <li>
+            <a href="{{route('client.product')}}">
+              <i><img style="width: 30px" src="{{asset('assets/img/ap.jpg')}}"></i> 
+              <p>Add Products</p>
+            </a>
+          </li>
+          
+          <li>
             <a href="{{route('client.displaycategory')}}">
-              <i class="now-ui-icons ui-1_bell-53"></i>
+              <i><img style="width: 30px" src="{{asset('assets/img/dc.png')}}"></i> 
               <p>Display Category</p>
             </a>
           </li>
           <li>
             <a href="{{route('client.frontstore')}}">
-              <i class="now-ui-icons users_single-02"></i>
+              <i><img style="width: 30px" src="{{asset('assets/img/fp.jpg')}}"></i> 
               <p>Front Page</p>
             </a>
           </li>

@@ -27,8 +27,8 @@
 </head>
 
 <body class="">
-  <div class="wrapper ">
-    <div class="sidebar" data-color="orange"> <!--  Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow" -->
+  <div class="wrapper " >
+    <div class="sidebar" data-color="orange" > <!--  Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow" -->
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-mini">
           {{-- CT --}}
@@ -37,25 +37,25 @@
           Creative Tim
         </a> --}}
       </div>
-      <div class="sidebar-wrapper" id="sidebar-wrapper">
+      <div class="sidebar-wrapper"  id="sidebar-wrapper">
         <ul class="nav">
           <li>
             <h6>Admin Dashboard</h6>
             <a href="{{route('admin.dashboard')}}">
-              <i class="now-ui-icons design_app"></i>
+             <i><img style="width: 30px" src="{{asset('assets/img/admin.jpg')}}"></i> 
               <p>Manage Admin</p>
               
             </a>
           </li>
           <li>
             <a href="{{route('admin.register')}}">
-              <i class="now-ui-icons education_atom"></i>
+              <i><img style="width: 30px" src="{{asset('assets/img/register.png')}}"></i> 
               <p>Register</p>
             </a>
           </li>
           <li>
             <a href="{{route('admin.displayclient')}}">
-              <i class="now-ui-icons location_map-big"></i>
+              <i><img style="width: 30px" src="{{asset('assets/img/admin.jpg')}}"></i> 
               <p>Display Clients</p>
             </a>
           </li>

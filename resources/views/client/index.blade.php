@@ -27,7 +27,7 @@
 <body>
 	
 		
-		<div class="header-middle"><!--header-middle-->
+		<div class="header-middle" style="background-color: rgb(92, 92, 236);"><!--header-middle-->
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4">
@@ -40,8 +40,8 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 							
-								<li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="#" style="color: rgb(65, 7, 7)"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="#" style="color: rgb(65, 7, 7)"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								
 							</ul>
 						</div>
@@ -50,7 +50,7 @@
 			</div>
 		</div><!--/header-middle-->
 	
-		<div class="header-bottom"><!--header-bottom-->
+		<div class="header-bottom" style="background-color: rgb(92, 92, 236);"><!--header-bottom-->
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-9">
@@ -64,12 +64,12 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="#" class="active">Home</a></li>
-								<li class="dropdown"><a href="#">cart<i class="fa fa-angle-down"></i></a>
+								<li><a href="#" class="active" style="color: rgb(65, 7, 7)">Home</a></li>
+								<li class="dropdown"><a href="#" style="color: rgb(65, 7, 7)">cart<i class="fa fa-angle-down"></i></a>
                                     
                                 </li> 
 							
-								<li><a href="{{route('client.dashboard')}}">Client D.B</a></li>
+								<li><a href="{{route('client.dashboard')}}" style="color: rgb(65, 7, 7)">Client D.B</a></li>
 							</ul>
 						</div>
 					</div>
@@ -86,10 +86,10 @@
 	
 	
 	<section>
-		<div class="container">
+		<div class="container" >
 			<div class="row">
-				<div class="col-sm-3">
-					<div class="left-sidebar">
+				<div class="col-sm-3" >
+					<div class="left-sidebar" >
 						<h2>Category</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							
@@ -135,7 +135,7 @@
 										<div class="productinfo text-center">
 											<img src="{{ asset('storage/images/'.$products-> image) }}" alt="" />
 											<h2>{{$products->price_per_unit}}</h2>
-											<p>{{$products->description}}<</p>
+											<p>{{$products->description}}</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 										<div class="product-overlay">
@@ -159,7 +159,7 @@
 	
 	<footer id="footer"><!--Footer-->
 		
-		<div class="footer-widget">
+		<div class="footer-widget" style="background-color: rgb(92, 92, 236);">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-2">

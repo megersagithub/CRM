@@ -88,10 +88,10 @@ class ProductController extends Controller
             
             $category->save();
          if($category)   {
-            return redirect('dashboard')->with('success', 'product added successfully');
+            return redirect('displaycategory')->with('success', 'product added successfully');
         }
         else{
-            return redirect()->back()->with('error', 'something went wrong');
+            return redirect()->back()->with('error', 'something was wrong');
         }
     }
     /**
